@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDI Designs Pvt. Ltd. | Corporate Interior Design & Build</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              red: '#D9232E',
+              darkRed: '#B01822',
+              slate: '#1E293B',
+              charcoal: '#111827',
+              light: '#F8FAFC',
+            }
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="font-sans text-slate-800 bg-white antialiased selection:bg-brand-red selection:text-white overflow-x-hidden">
+
+  <!-- Top Info Bar -->
+  <div class="bg-brand-charcoal text-slate-300 text-xs py-2 border-b border-slate-800 hidden md:block">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <div class="flex items-center space-x-6">
+        <span class="flex items-center gap-2">
+          <i class="fa-solid fa-location-dot text-brand-red"></i>
+          New Delhi • Mumbai • Bangalore • Chennai
+        </span>
+        <span class="flex items-center gap-2">
+          <i class="fa-solid fa-certificate text-brand-red"></i>
+          ISO 9001 • ISO 14001 • OHSAS 18001 Certified
+        </span>
+      </div>
+      <div class="flex items-center space-x-5">
+        <a href="mailto:info@ididesign.com" class="hover:text-white transition flex items-center gap-1.5">
+          <i class="fa-solid fa-envelope text-brand-red"></i> info@ididesign.com
+        </a>
+        <a href="tel:+911149551000" class="hover:text-white transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-brand-red"></i> +91-11-49551000
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Header -->
+  <header id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Brand Logo -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-brand-red flex items-center justify-center text-white font-display font-extrabold text-xl tracking-tighter shadow-md group-hover:scale-105 transition-transform">
+            iDi
+          </div>
+          <div>
+            <span class="font-display font-extrabold text-xl tracking-tight text-slate-900 block leading-none">
+              IDI DESIGNS
+            </span>
+            <span class="text-[10px] font-semibold tracking-[0.22em] text-slate-500 uppercase block mt-1">
+              Pvt. Ltd.
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-700">
+          <a href="#home" class="hover:text-brand-red transition py-2">Home</a>
+          <a href="#about" class="hover:text-brand-red transition py-2">About</a>
+          <a href="#why-us" class="hover:text-brand-red transition py-2">Why Us</a>
+          <a href="#services" class="hover:text-brand-red transition py-2">Services</a>
+          <a href="#projects" class="hover:text-brand-red transition py-2">Projects</a>
+          <a href="#clients" class="hover:text-brand-red transition py-2">Clients</a>
+          <a href="#testimonials" class="hover:text-brand-red transition py-2">Client Speak</a>
+          <a href="#contact" class="hover:text-brand-red transition py-2">Contact Us</a>
+        </nav>
+
+        <!-- Action CTA & Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <button onclick="openQuoteModal()" class="hidden sm:inline-flex items-center gap-2 bg-brand-red hover:bg-brand-darkRed text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-sm hover:shadow transition-all">
+            <span>Start a Project</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+
+          <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 transition">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-6 space-y-2 shadow-lg">
+      <a href="#home" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-brand-red">Home</a>
+      <a href="#about" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-brand-red">About</a>
+      <a href="#why-us" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-brand-red">Why Us</a>
+      <a href="#services" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-brand-red">Services</a>
+      <a href="#projects" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-brand-red">Projects</a>
+      <a href="#clients" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-brand-red">Clients</a>
+      <a href="#testimonials" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-brand-red">Client Speak</a>
+      <a href="#contact" class="mobile-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-50 hover:text-brand-red">Contact Us</a>
+      <div class="pt-2">
+        <button onclick="openQuoteModal()" class="w-full bg-brand-red text-white font-semibold py-3 rounded-xl shadow">
+          Start a Project
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Full-Width Touch Slider -->
+  <section id="home" class="relative h-[82vh] min-h-[540px] max-h-[820px] w-full overflow-hidden bg-slate-900 select-none">
+    <!-- Slides Container -->
+    <div id="hero-slides" class="relative w-full h-full">
+      <!-- Slide 1 -->
+      <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-100 z-10">
+        <img
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"
+          onerror="this.src='https://placehold.co/1920x900/1E293B/FFFFFF?text=Modern+Corporate+Workspace'"
+          alt="Modern Corporate Workspace"
+          class="w-full h-full object-cover scale-105 transition-transform duration-[6000ms]"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/60 to-transparent"></div>
+        <div class="absolute inset-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+          <div class="max-w-2xl text-white space-y-6">
+            <span class="inline-block px-3.5 py-1.5 rounded-full bg-brand-red/90 text-xs font-bold uppercase tracking-widest">
+              Design & Build Excellence
+            </span>
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+              Crafting Agile & Inspiring Workspaces
+            </h1>
+            <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-xl">
+              Transforming corporate interiors through innovative design, turnkey contracting, and seamless precision execution across India.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a href="#projects" class="bg-brand-red hover:bg-brand-darkRed text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2">
+                <span>Explore Projects</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#services" class="bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 font-semibold px-7 py-3.5 rounded-xl transition">
+                Our Capabilities
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80"
+          onerror="this.src='https://placehold.co/1920x900/0F172A/FFFFFF?text=Turnkey+General+Contracting'"
+          alt="Turnkey General Contracting"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/60 to-transparent"></div>
+        <div class="absolute inset-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+          <div class="max-w-2xl text-white space-y-6">
+            <span class="inline-block px-3.5 py-1.5 rounded-full bg-brand-red/90 text-xs font-bold uppercase tracking-widest">
+              General Contracting
+            </span>
+            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+              Execution With Unmatched Perfection
+            </h2>
+            <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-xl">
+              Backed by 300+ experienced professionals and 20M+ sq.ft. of delivered spaces for Fortune 500 enterprises and diplomatic missions.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <button onclick="openQuoteModal()" class="bg-brand-red hover:bg-brand-darkRed text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2">
+                <span>Consult Our Team</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <a href="#about" class="bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 font-semibold px-7 py-3.5 rounded-xl transition">
+                About IDI
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out opacity-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80"
+          onerror="this.src='https://placehold.co/1920x900/1E293B/FFFFFF?text=Smart+MEP+and+Automation'"
+          alt="Smart MEP & Multimedia Automation"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/60 to-transparent"></div>
+        <div class="absolute inset-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+          <div class="max-w-2xl text-white space-y-6">
+            <span class="inline-block px-3.5 py-1.5 rounded-full bg-brand-red/90 text-xs font-bold uppercase tracking-widest">
+              MEP & Smart Tech
+            </span>
+            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+              Automated & Future-Ready Spaces
+            </h2>
+            <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-xl">
+              In-house MEP engineering and intelligent multimedia integration engineered for sustainability, safety, and operational efficiency.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a href="#services" class="bg-brand-red hover:bg-brand-darkRed text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg transition flex items-center gap-2">
+                <span>Explore MEP & Tech</span>
+                <i class="fa-solid fa-bolt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Previous / Next Controls -->
+    <button id="prev-slide" aria-label="Previous Slide" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-brand-red text-white flex items-center justify-center backdrop-blur-sm transition">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="next-slide" aria-label="Next Slide" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-brand-red text-white flex items-center justify-center backdrop-blur-sm transition">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Slide Dots -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
+      <button class="hero-dot w-8 h-2.5 rounded-full bg-brand-red transition-all" data-index="0" aria-label="Slide 1"></button>
+      <button class="hero-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all" data-index="1" aria-label="Slide 2"></button>
+      <button class="hero-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all" data-index="2" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <!-- Welcome / About IDI Designs Section -->
+  <section id="about" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Image Collage -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1000&q=80"
+              onerror="this.src='https://placehold.co/800x600/334155/FFFFFF?text=IDI+Designs+Office+Interior'"
+              alt="IDI Designs Office Interior"
+              class="w-full h-[420px] object-cover"
+            />
+          </div>
+          <!-- Floating Experience Badge -->
+          <div class="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-right-6 bg-brand-charcoal text-white p-6 rounded-2xl shadow-xl border border-slate-700 max-w-xs">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-brand-red flex items-center justify-center text-2xl font-display font-extrabold shrink-0">
+                16+
+              </div>
+              <div>
+                <p class="font-display font-bold text-lg leading-tight">Years of Excellence</p>
+                <p class="text-xs text-slate-400 mt-1">Established 18th June 2010 in New Delhi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Welcome Narrative -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 text-brand-red font-bold text-xs uppercase tracking-widest">
+            <span class="w-8 h-0.5 bg-brand-red"></span>
+            <span>About Our Firm</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+            Welcome to <span class="text-brand-red">IDI Designs</span>
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-base">
+            <strong>IDI DESIGNS</strong>, a leading contracting and interior architecture firm, is driven by the dynamic combination of interior designing and its execution with perfection. Paired with an innovative and dedicated approach to design, documentation, and turnkey execution globally, IDI has become an internationally sought-after brand.
+          </p>
+          <p class="text-slate-600 leading-relaxed text-base">
+            Established in New Delhi, India on 18th June 2010, <strong>IDI Designs Pvt. Ltd.</strong> has grown into an organization of more than <strong>300 experienced professionals</strong>. With our registered corporate headquarters in New Delhi and branch offices in <strong>Mumbai, Bangalore, and Chennai</strong>—supported by dedicated site offices nationwide—we deliver consistent quality locally and at scale.
+          </p>
+
+          <!-- Pan-India Footprint Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-center">
+              <i class="fa-solid fa-building text-brand-red mb-1.5"></i>
+              <p class="font-bold text-sm text-slate-900">New Delhi</p>
+              <p class="text-[11px] text-slate-500">Corporate HQ</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-center">
+              <i class="fa-solid fa-city text-brand-red mb-1.5"></i>
+              <p class="font-bold text-sm text-slate-900">Mumbai</p>
+              <p class="text-[11px] text-slate-500">West Hub</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-center">
+              <i class="fa-solid fa-microchip text-brand-red mb-1.5"></i>
+              <p class="font-bold text-sm text-slate-900">Bangalore</p>
+              <p class="text-[11px] text-slate-500">Tech Hub</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 text-center">
+              <i class="fa-solid fa-compass-drafting text-brand-red mb-1.5"></i>
+              <p class="font-bold text-sm text-slate-900">Chennai</p>
+              <p class="text-[11px] text-slate-500">South Hub</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us? Section -->
+  <section id="why-us" class="py-20 bg-slate-50 border-y border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <span class="text-brand-red font-bold text-xs uppercase tracking-widest">Core Philosophy</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">Why Us?</h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Combining design intelligence, transparent governance, and rapid execution to elevate your corporate identity.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1: Why IDI Designs -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/70 flex flex-col group">
+          <div class="h-52 overflow-hidden relative">
+            <img
+              src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/600x400/1E293B/FFFFFF?text=Why+IDI+Designs'"
+              alt="Why IDI Designs"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute top-4 left-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-lg">
+              01
+            </div>
+          </div>
+          <div class="p-7 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Why IDI Designs</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                iDi Designs innovates corporate interior spaces with the synergy of human-centric design and smart technology. We are industry specialists in designing and executing agile workplaces on tight timelines.
+              </p>
+            </div>
+            <button onclick="openDetailModal('Why IDI Designs', 'iDi Designs innovates corporate interior spaces with the synergy of design and technology. With over 300 in-house architects, project managers, and MEP engineers, we ensure single-point accountability from concept sketches to final handover—delivering complex commercial fit-outs on schedule and within budget.')" class="inline-flex items-center gap-2 text-brand-red font-semibold text-sm hover:gap-3 transition-all self-start">
+              <span>View more</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Vision & Mission -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/70 flex flex-col group">
+          <div class="h-52 overflow-hidden relative">
+            <img
+              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/600x400/1E293B/FFFFFF?text=Vision+and+Mission'"
+              alt="Vision & Mission"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute top-4 left-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-lg">
+              02
+            </div>
+          </div>
+          <div class="p-7 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Vision & Mission</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                We believe in uncompromising honesty and delivering the finest craftsmanship to our customers. We seek to enhance your brand equity by building inspiring, sustainable environments.
+              </p>
+            </div>
+            <button onclick="openDetailModal('Vision & Mission', 'Our Vision is to remain India’s most trusted Design & Build partner for global enterprises. Our Mission is built on integrity, zero-compromise workplace safety, sustainable material sourcing, and craftsmanship that turns physical workspaces into strategic brand assets.')" class="inline-flex items-center gap-2 text-brand-red font-semibold text-sm hover:gap-3 transition-all self-start">
+              <span>View more</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Our Values -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/70 flex flex-col group">
+          <div class="h-52 overflow-hidden relative">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/600x400/1E293B/FFFFFF?text=Our+Values'"
+              alt="Our Values"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute top-4 left-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-lg">
+              03
+            </div>
+          </div>
+          <div class="p-7 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Our Values</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Collaboratively administrating empowered project teams via transparent workflows, strict EHS compliance, and customer-first agility across every milestone.
+              </p>
+            </div>
+            <button onclick="openDetailModal('Our Core Values', 'Collaboration, Accountability, Safety First (OHSAS certified), and Relentless Innovation form the bedrock of IDI Designs. Every site team operates with transparent reporting and rigorous quality audits at every stage of construction.')" class="inline-flex items-center gap-2 text-brand-red font-semibold text-sm hover:gap-3 transition-all self-start">
+              <span>View more</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+        <div class="space-y-3 max-w-2xl">
+          <span class="text-brand-red font-bold text-xs uppercase tracking-widest">End-to-End Capabilities</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">Our Services</h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            Integrated architectural design, general contracting, MEP engineering, and workplace technology under one roof.
+          </p>
+        </div>
+        <button onclick="openQuoteModal()" class="self-start md:self-auto px-5 py-2.5 rounded-xl border border-slate-300 hover:border-brand-red hover:text-brand-red text-sm font-semibold transition">
+          Request Service Brochure
+        </button>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Service 1: Design & Build -->
+        <div class="group p-7 rounded-2xl bg-slate-50 hover:bg-brand-charcoal border border-slate-200/80 hover:border-brand-charcoal transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-brand-red/10 group-hover:bg-brand-red text-brand-red group-hover:text-white flex items-center justify-center text-2xl mb-6 transition-colors">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 group-hover:text-white mb-3 transition-colors">
+              Design & Build
+            </h3>
+            <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed transition-colors">
+              IDI Designs innovates corporate interior spaces into modern and agile workspaces with the help of Design and Technology.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-200/80 group-hover:border-slate-700 flex items-center justify-between text-xs font-semibold text-brand-red group-hover:text-white">
+            <span>Turnkey Solutions</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </div>
+
+        <!-- Service 2: General Contracting -->
+        <div class="group p-7 rounded-2xl bg-slate-50 hover:bg-brand-charcoal border border-slate-200/80 hover:border-brand-charcoal transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-brand-red/10 group-hover:bg-brand-red text-brand-red group-hover:text-white flex items-center justify-center text-2xl mb-6 transition-colors">
+              <i class="fa-solid fa-helmet-safety"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 group-hover:text-white mb-3 transition-colors">
+              General Contracting
+            </h3>
+            <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed transition-colors">
+              We are industry experts in executing complex architectural plans in addition to “Design & Build” projects with zero compromise on finish.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-200/80 group-hover:border-slate-700 flex items-center justify-between text-xs font-semibold text-brand-red group-hover:text-white">
+            <span>Precision Fit-Outs</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </div>
+
+        <!-- Service 3: MEP Services -->
+        <div class="group p-7 rounded-2xl bg-slate-50 hover:bg-brand-charcoal border border-slate-200/80 hover:border-brand-charcoal transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-brand-red/10 group-hover:bg-brand-red text-brand-red group-hover:text-white flex items-center justify-center text-2xl mb-6 transition-colors">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 group-hover:text-white mb-3 transition-colors">
+              MEP Services
+            </h3>
+            <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed transition-colors">
+              IDI has a fully fledged in-house team of MEP engineers who are experts in executing active as well as passive HVAC, electrical, and fire safety systems.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-200/80 group-hover:border-slate-700 flex items-center justify-between text-xs font-semibold text-brand-red group-hover:text-white">
+            <span>In-House Engineering</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </div>
+
+        <!-- Service 4: Multimedia & Technology -->
+        <div class="group p-7 rounded-2xl bg-slate-50 hover:bg-brand-charcoal border border-slate-200/80 hover:border-brand-charcoal transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-brand-red/10 group-hover:bg-brand-red text-brand-red group-hover:text-white flex items-center justify-center text-2xl mb-6 transition-colors">
+              <i class="fa-solid fa-display"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 group-hover:text-white mb-3 transition-colors">
+              Multimedia & Technology
+            </h3>
+            <p class="text-slate-600 group-hover:text-slate-300 text-sm leading-relaxed transition-colors">
+              With increasing demand in tech-enabled offices, we specialize in providing fully functional AV, acoustic, and smart automated workspaces.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-200/80 group-hover:border-slate-700 flex items-center justify-between text-xs font-semibold text-brand-red group-hover:text-white">
+            <span>Smart Automation</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Portfolio (Filterable) -->
+  <section id="projects" class="py-20 bg-slate-50 border-y border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div class="space-y-2">
+          <span class="text-brand-red font-bold text-xs uppercase tracking-widest">Portfolio Showcase</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">Featured Projects</h2>
+        </div>
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-2" id="project-filters">
+          <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-red text-white shadow-sm transition">All</button>
+          <button data-filter="corporate" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-white text-slate-700 hover:bg-slate-200 transition">Corporate</button>
+          <button data-filter="healthcare" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-white text-slate-700 hover:bg-slate-200 transition">Healthcare</button>
+          <button data-filter="retail" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-white text-slate-700 hover:bg-slate-200 transition">Retail & Diplomatic</button>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7" id="project-grid">
+        <!-- Project 1 -->
+        <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200/70" data-category="healthcare">
+          <div class="relative h-60 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/600x450/1E293B/FFFFFF?text=Apollo+Speciality+Hospitals'"
+              alt="Apollo Speciality Hospitals"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] font-semibold px-3 py-1 rounded-lg">Healthcare</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-bold text-lg text-slate-900">Apollo Speciality Hospitals</h3>
+            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-brand-red"></i> New Delhi & Chennai • Turnkey Interior & MEP
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200/70" data-category="retail">
+          <div class="relative h-60 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/600x450/1E293B/FFFFFF?text=Marks+and+Spencer'"
+              alt="Marks & Spencer Flagship"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] font-semibold px-3 py-1 rounded-lg">Retail</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-bold text-lg text-slate-900">Marks & Spencer Flagship</h3>
+            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-brand-red"></i> Fast-Track 72-Day Monetization Fit-Out
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200/70" data-category="retail">
+          <div class="relative h-60 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/600x450/1E293B/FFFFFF?text=British+Deputy+High+Commission'"
+              alt="British Deputy High Commission"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] font-semibold px-3 py-1 rounded-lg">Diplomatic</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-bold text-lg text-slate-900">British Deputy High Commission</h3>
+            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-brand-red"></i> High-Security Diplomatic Facility Fit-Out
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200/70" data-category="corporate">
+          <div class="relative h-60 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/600x450/1E293B/FFFFFF?text=Vertex+Corporate+Campus'"
+              alt="Vertex Corporate Hub"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] font-semibold px-3 py-1 rounded-lg">Corporate</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-bold text-lg text-slate-900">Vertex Global Corporate Hub</h3>
+            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-brand-red"></i> Gurugram • 120,000 Sq.Ft. Design & Build
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200/70" data-category="corporate">
+          <div class="relative h-60 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/600x450/1E293B/FFFFFF?text=Agile+Tech+Innovation+Center'"
+              alt="Agile Tech Innovation Center"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] font-semibold px-3 py-1 rounded-lg">Corporate</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-bold text-lg text-slate-900">Agile Tech Innovation Center</h3>
+            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-brand-red"></i> Bangalore • Smart AV & Automated Workspace
+            </p>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-200/70" data-category="corporate">
+          <div class="relative h-60 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1505409859467-3a796fd5798e?auto=format&fit=crop&w=800&q=80"
+              onerror="this.src='https://placehold.co/600x450/1E293B/FFFFFF?text=Financial+Tower+Executive+Suites'"
+              alt="Financial Tower Executive Suites"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white text-[11px] font-semibold px-3 py-1 rounded-lg">Corporate</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-bold text-lg text-slate-900">Financial Tower Executive Suites</h3>
+            <p class="text-xs text-slate-500 mt-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-brand-red"></i> Mumbai BKC • General Contracting & MEP
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facts About iDi Designs (Animated Counters Banner) -->
+  <section id="facts-section" class="relative py-20 bg-brand-charcoal text-white overflow-hidden">
+    <!-- Subtle Geometric Pattern -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#D9232E 1.5px, transparent 1.5px); background-size: 28px 28px;"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+        <span class="text-brand-red font-bold text-xs uppercase tracking-widest">Milestones & Scale</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold">Facts About iDi Designs</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-8 text-center">
+        <!-- Fact 1 -->
+        <div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-brand-red/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-ruler-combined"></i>
+          </div>
+          <div class="font-display text-4xl sm:text-5xl font-extrabold text-white">
+            <span class="counter" data-target="20">0</span><span> M</span>
+          </div>
+          <p class="text-slate-300 font-medium mt-2">Sq.Ft. Area Developed</p>
+        </div>
+
+        <!-- Fact 2 -->
+        <div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-brand-red/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-face-smile"></i>
+          </div>
+          <div class="font-display text-4xl sm:text-5xl font-extrabold text-white">
+            <span class="counter" data-target="400">0</span><span> +</span>
+          </div>
+          <p class="text-slate-300 font-medium mt-2">Happy Customers</p>
+        </div>
+
+        <!-- Fact 3 -->
+        <div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+          <div class="w-14 h-14 mx-auto rounded-2xl bg-brand-red/20 text-brand-red flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-building-circle-check"></i>
+          </div>
+          <div class="font-display text-4xl sm:text-5xl font-extrabold text-white">
+            <span class="counter" data-target="500">0</span><span> +</span>
+          </div>
+          <p class="text-slate-300 font-medium mt-2">Delivered Projects</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Clients Logo Strip -->
+  <section id="clients" class="py-16 bg-white border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-10 gap-4">
+        <div>
+          <span class="text-brand-red font-bold text-xs uppercase tracking-widest">Trusted Partners</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Our Clients</h2>
+        </div>
+        <button onclick="openDetailModal('Our Esteemed Clientele', 'IDI Designs Pvt. Ltd. is proud to partner with over 400+ Fortune 500 corporations, diplomatic missions, healthcare leaders, and retail giants including Apollo Speciality Hospitals, British Deputy High Commission, Marks & Spencer, Vertex, leading IT campuses, and global banking institutions across India.')" class="self-start sm:self-auto text-sm font-semibold text-brand-red hover:underline flex items-center gap-1.5">
+          <span>View All Clients</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="h-24 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center p-4 text-center hover:border-brand-red/50 hover:shadow-md transition">
+          <i class="fa-solid fa-hospital text-slate-400 text-xl mb-1.5"></i>
+          <span class="font-display font-bold text-xs text-slate-700">APOLLO HOSPITALS</span>
+        </div>
+        <div class="h-24 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center p-4 text-center hover:border-brand-red/50 hover:shadow-md transition">
+          <i class="fa-solid fa-landmark text-slate-400 text-xl mb-1.5"></i>
+          <span class="font-display font-bold text-xs text-slate-700">BRITISH HIGH COMM.</span>
+        </div>
+        <div class="h-24 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center p-4 text-center hover:border-brand-red/50 hover:shadow-md transition">
+          <i class="fa-solid fa-bag-shopping text-slate-400 text-xl mb-1.5"></i>
+          <span class="font-display font-bold text-xs text-slate-700">MARKS & SPENCER</span>
+        </div>
+        <div class="h-24 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center p-4 text-center hover:border-brand-red/50 hover:shadow-md transition">
+          <i class="fa-solid fa-globe text-slate-400 text-xl mb-1.5"></i>
+          <span class="font-display font-bold text-xs text-slate-700">VERTEX GLOBAL</span>
+        </div>
+        <div class="h-24 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center p-4 text-center hover:border-brand-red/50 hover:shadow-md transition">
+          <i class="fa-solid fa-building-columns text-slate-400 text-xl mb-1.5"></i>
+          <span class="font-display font-bold text-xs text-slate-700">STANDARD FINCORP</span>
+        </div>
+        <div class="h-24 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col items-center justify-center p-4 text-center hover:border-brand-red/50 hover:shadow-md transition">
+          <i class="fa-solid fa-server text-slate-400 text-xl mb-1.5"></i>
+          <span class="font-display font-bold text-xs text-slate-700">NEXUS TECH PARKS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Speak (Testimonials) & ISO Certifications -->
+  <section id="testimonials" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+        <span class="text-brand-red font-bold text-xs uppercase tracking-widest">Endorsements</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900">Client Speak</h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Hear directly from leaders whose spaces we have designed, built, and delivered on time.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-brand-red text-2xl mb-4">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed italic">
+              "I must congratulate the entire team as the product delivered has received fantastic appreciation. Our promoters' family were simply awed with the outcome and described it as a masterpiece!"
+            </p>
+          </div>
+          <div class="pt-5 mt-6 border-t border-slate-100">
+            <p class="font-display font-bold text-sm text-slate-900">Apollo Speciality Hospitals</p>
+            <p class="text-xs text-slate-500">Healthcare Infrastructure</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-brand-red text-2xl mb-4">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed italic">
+              "I would like to pass my sincere gratitude to your company for the commitment and dedication for completing the project on time and to a very good standard, despite difficult site conditions."
+            </p>
+          </div>
+          <div class="pt-5 mt-6 border-t border-slate-100">
+            <p class="font-display font-bold text-sm text-slate-900">British Deputy High Commission</p>
+            <p class="text-xs text-slate-500">Diplomatic Mission</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-brand-red text-2xl mb-4">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed italic">
+              "We are extremely happy with the team's performance as well as exceptionally happy with your team leading skills and proactive site coordination throughout delivery."
+            </p>
+          </div>
+          <div class="pt-5 mt-6 border-t border-slate-100">
+            <p class="font-display font-bold text-sm text-slate-900">Head (Corporate Service)</p>
+            <p class="text-xs text-slate-500">Vertex</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-brand-red text-2xl mb-4">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed italic">
+              "Good job done by the team. What is even more appreciating is getting the property monetized in just 72 days with consistently good quality finish."
+            </p>
+          </div>
+          <div class="pt-5 mt-6 border-t border-slate-100">
+            <p class="font-display font-bold text-sm text-slate-900">Marks and Spencer</p>
+            <p class="text-xs text-slate-500">Retail Operations</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications Bar -->
+      <div class="mt-20 bg-white rounded-2xl p-8 sm:p-10 shadow-sm border border-slate-200/80">
+        <div class="text-center mb-8">
+          <span class="text-brand-red font-bold text-xs uppercase tracking-widest">Global Compliance</span>
+          <h3 class="font-display text-2xl font-extrabold text-slate-900 mt-1">Certifications & Standards</h3>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="flex items-center gap-4 p-5 rounded-xl bg-slate-50 border border-slate-200/70">
+            <div class="w-12 h-12 rounded-xl bg-emerald-600/10 text-emerald-700 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-brand-red uppercase tracking-wider">ISO 14001:2004</span>
+              <h4 class="font-display font-bold text-sm text-slate-900 mt-0.5">Environmental Management System</h4>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 p-5 rounded-xl bg-slate-50 border border-slate-200/70">
+            <div class="w-12 h-12 rounded-xl bg-amber-600/10 text-amber-700 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-brand-red uppercase tracking-wider">OHSAS 18001:2007</span>
+              <h4 class="font-display font-bold text-sm text-slate-900 mt-0.5">Occupational Health & Safety System</h4>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 p-5 rounded-xl bg-slate-50 border border-slate-200/70">
+            <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-700 flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div>
+              <span class="text-xs font-extrabold text-brand-red uppercase tracking-wider">ISO 9001:2008</span>
+              <h4 class="font-display font-bold text-sm text-slate-900 mt-0.5">Quality Management System</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Let's Hear From You CTA Banner -->
+  <section class="py-16 bg-brand-red text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="space-y-2 text-center lg:text-left max-w-2xl">
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold">Let's hear from you!</h2>
+        <p class="text-white/90 text-base sm:text-lg">
+          Ready to take it a step further? Let's start talking about your project or idea and find out how we can help you.
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        <button onclick="openQuoteModal()" class="bg-white text-brand-red hover:bg-slate-100 font-bold px-8 py-4 rounded-xl shadow-lg transition flex items-center gap-2">
+          <span>Get a Free Consultation</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer & Contact Section -->
+  <footer id="contact" class="bg-brand-charcoal text-slate-300 pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        <!-- Brand Column -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-red flex items-center justify-center text-white font-display font-extrabold text-lg">
+              iDi
+            </div>
+            <div>
+              <span class="font-display font-extrabold text-lg text-white block leading-none">IDI DESIGNS</span>
+              <span class="text-[10px] tracking-[0.2em] text-slate-400 uppercase block mt-1">Pvt. Ltd.</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Leading Design & Build and General Contracting organization transforming corporate, healthcare, diplomatic, and retail spaces across India since 2010.
+          </p>
+          <!-- Social Links -->
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#contact" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-red text-white flex items-center justify-center transition">
+              <i class="fa-brands fa-linkedin-in text-sm"></i>
+            </a>
+            <a href="#contact" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-red text-white flex items-center justify-center transition">
+              <i class="fa-brands fa-facebook-f text-sm"></i>
+            </a>
+            <a href="#contact" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-red text-white flex items-center justify-center transition">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="#contact" aria-label="Twitter" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-red text-white flex items-center justify-center transition">
+              <i class="fa-brands fa-x-twitter text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="#home" class="hover:text-white transition">Home</a></li>
+            <li><a href="#projects" class="hover:text-white transition">Projects</a></li>
+            <li><a href="#services" class="hover:text-white transition">Services</a></li>
+            <li><a href="#testimonials" class="hover:text-white transition">Testimonials</a></li>
+            <li><a href="#clients" class="hover:text-white transition">Clients</a></li>
+            <li><button onclick="openDetailModal('Careers & Compliance', 'IDI Designs Pvt. Ltd. maintains strict statutory, EHS, and labor compliance across all project sites. Interested architects, project managers, and MEP engineers can send portfolios to info@ididesign.com.')" class="hover:text-white transition text-left">Career & Compliance</button></li>
+          </ul>
+        </div>
+
+        <!-- Head Office -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Head Office</h4>
+          <p class="text-sm text-slate-400 leading-relaxed flex items-start gap-2.5">
+            <i class="fa-solid fa-location-dot text-brand-red mt-1 shrink-0"></i>
+            <span>
+              iDI Designs Pvt. Ltd., 2nd Floor, B1/E7, PEC Building, Mohan Cooperative Industrial Estate, New Delhi-110044
+            </span>
+          </p>
+          <p class="text-xs text-slate-500 pt-1">
+            Branch Offices: Mumbai • Bangalore • Chennai
+          </p>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Contact Us</h4>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li>
+              <a href="mailto:info@ididesign.com" class="hover:text-white transition flex items-center gap-2.5">
+                <i class="fa-solid fa-envelope text-brand-red"></i>
+                <span>E: info@ididesign.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+911149551000" class="hover:text-white transition flex items-center gap-2.5">
+                <i class="fa-solid fa-phone text-brand-red"></i>
+                <span>T: +91-11-49551000</span>
+              </a>
+            </li>
+          </ul>
+          <div class="pt-2">
+            <button onclick="openQuoteModal()" class="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-brand-red text-white text-xs font-bold uppercase tracking-wider transition">
+              Send an Inquiry
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+        <p>Copyright © 2026 | IDI Designs Pvt. Ltd. | All Rights Reserved.</p>
+        <p>Corporate Interior Design • Design & Build • General Contracting</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Project Inquiry Modal -->
+  <div id="quote-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/70 backdrop-blur-sm p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative animate-[fadeIn_0.2s_ease-out]">
+      <button onclick="closeQuoteModal()" aria-label="Close Modal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-brand-red font-bold text-xs uppercase tracking-widest">Start a Conversation</span>
+        <h3 class="font-display text-2xl font-extrabold text-slate-900 mt-1">Discuss Your Project</h3>
+        <p class="text-slate-500 text-sm mt-1">Fill in your details and our Design & Build team will reach out within 24 hours.</p>
+      </div>
+
+      <form id="inquiry-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name *</label>
+          <input type="text" required placeholder="e.g. Rajesh Sharma" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none text-sm" />
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Corporate Email *</label>
+            <input type="email" required placeholder="name@company.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number *</label>
+            <input type="tel" required placeholder="+91 98XXX XXXXX" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none text-sm" />
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Service Required</label>
+            <select class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-brand-red outline-none text-sm bg-white">
+              <option>Design & Build</option>
+              <option>General Contracting</option>
+              <option>MEP Services</option>
+              <option>Multimedia & Technology</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Project Location</label>
+            <select class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-brand-red outline-none text-sm bg-white">
+              <option>New Delhi / NCR</option>
+              <option>Mumbai</option>
+              <option>Bangalore</option>
+              <option>Chennai</option>
+              <option>Other City</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Project Brief</label>
+          <textarea rows="3" placeholder="Approximate area (sq.ft.), timeline, or specific requirements..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none text-sm"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-brand-red hover:bg-brand-darkRed text-white font-bold py-3.5 rounded-xl shadow-md transition">
+          Submit Project Inquiry
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Info Detail Modal (Replaces alert() cleanly) -->
+  <div id="detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/70 backdrop-blur-sm p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative">
+      <button onclick="closeDetailModal()" aria-label="Close Info Modal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="w-11 h-11 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-lg mb-4">
+        <i class="fa-solid fa-circle-info"></i>
+      </div>
+      <h3 id="detail-modal-title" class="font-display text-xl font-extrabold text-slate-900 mb-3">Title</h3>
+      <p id="detail-modal-body" class="text-slate-600 text-sm leading-relaxed mb-6">Description</p>
+      <button onclick="closeDetailModal()" class="w-full bg-brand-charcoal hover:bg-slate-800 text-white font-semibold py-2.5 rounded-xl transition">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-slate-900 text-white px-5 py-3.5 rounded-xl shadow-2xl border border-slate-700 items-center gap-3 text-sm">
+    <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+    <span id="toast-message">Inquiry submitted successfully!</span>
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // 1. Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // 2. Hero Touch & Button Slider
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    const prevBtn = document.getElementById('prev-slide');
+    const nextBtn = document.getElementById('next-slide');
+    const heroSection = document.getElementById('home');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+      slides.forEach((slide, idx) => {
+        if (idx === currentSlide) {
+          slide.classList.remove('opacity-0', 'z-0');
+          slide.classList.add('opacity-100', 'z-10');
+        } else {
+          slide.classList.remove('opacity-100', 'z-10');
+          slide.classList.add('opacity-0', 'z-0');
+        }
+      });
+
+      dots.forEach((dot, idx) => {
+        if (idx === currentSlide) {
+          dot.classList.remove('w-2.5', 'bg-white/50');
+          dot.classList.add('w-8', 'bg-brand-red');
+        } else {
+          dot.classList.remove('w-8', 'bg-brand-red');
+          dot.classList.add('w-2.5', 'bg-white/50');
+        }
+      });
+    }
+
+    function startAutoSlide() {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(() => showSlide(currentSlide + 1), 5500);
+    }
+
+    prevBtn.addEventListener('click', () => {
+      showSlide(currentSlide - 1);
+      startAutoSlide();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      showSlide(currentSlide + 1);
+      startAutoSlide();
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        showSlide(parseInt(dot.dataset.index, 10));
+        startAutoSlide();
+      });
+    });
+
+    // Touch Swipe Support for Hero Slider
+    let touchStartX = 0;
+    heroSection.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    heroSection.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 50) {
+        showSlide(currentSlide + 1);
+        startAutoSlide();
+      } else if (touchEndX - touchStartX > 50) {
+        showSlide(currentSlide - 1);
+        startAutoSlide();
+      }
+    }, { passive: true });
+
+    startAutoSlide();
+
+    // 3. Portfolio Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-brand-red', 'text-white', 'shadow-sm');
+          b.classList.add('bg-white', 'text-slate-700');
+        });
+        btn.classList.remove('bg-white', 'text-slate-700');
+        btn.classList.add('bg-brand-red', 'text-white', 'shadow-sm');
+
+        const category = btn.dataset.filter;
+        projectCards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // 4. Animated Statistics Counter on Scroll
+    let countersStarted = false;
+    const factsSection = document.getElementById('facts-section');
+    const counters = document.querySelectorAll('.counter');
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !countersStarted) {
+        countersStarted = true;
+        counters.forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          const duration = 1600;
+          const stepTime = 20;
+          const steps = duration / stepTime;
+          const increment = target / steps;
+          let current = 0;
+
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              counter.textContent = target;
+              clearInterval(timer);
+            } else {
+              counter.textContent = Math.floor(current);
+            }
+          }, stepTime);
+        });
+      }
+    }, { threshold: 0.3 });
+
+    counterObserver.observe(factsSection);
+
+    // 5. Modals & Toast Feedback
+    const quoteModal = document.getElementById('quote-modal');
+    const detailModal = document.getElementById('detail-modal');
+    const toast = document.getElementById('toast');
+
+    function openQuoteModal() {
+      quoteModal.classList.remove('hidden');
+      quoteModal.classList.add('flex');
+    }
+
+    function closeQuoteModal() {
+      quoteModal.classList.add('hidden');
+      quoteModal.classList.remove('flex');
+    }
+
+    function openDetailModal(title, body) {
+      document.getElementById('detail-modal-title').textContent = title;
+      document.getElementById('detail-modal-body').textContent = body;
+      detailModal.classList.remove('hidden');
+      detailModal.classList.add('flex');
+    }
+
+    function closeDetailModal() {
+      detailModal.classList.add('hidden');
+      detailModal.classList.remove('flex');
+    }
+
+    function showToast(message) {
+      document.getElementById('toast-message').textContent = message;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 4000);
+    }
+
+    document.getElementById('inquiry-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      e.target.reset();
+      closeQuoteModal();
+      showToast('Thank you! Our team at IDI Designs will contact you shortly.');
+    });
+
+    // Close modals when clicking backdrop
+    [quoteModal, detailModal].forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
